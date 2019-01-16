@@ -1,0 +1,212 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F5F5F5;
+}
+
+
+/* Very Small screens */
+@media screen and (max-width: 450px) {
+	header {
+		display: none;
+	}
+
+	.ul-hidden {
+		display: none;
+	}
+
+	.spacer {
+		display: none;
+	}
+
+	.bookmark-box h1::before {
+		margin: 20vh 5vw;
+	}
+
+	#submitBookmark input {
+		width: 75vw;
+	}
+}
+
+/* Small screens */
+@media screen and (max-width: 720px) {
+
+	nav .burger {
+		display: flex;
+	}
+
+	.wrapper {
+		padding: 5vh 8vw;
+	}
+}
+
+/* Large screens */
+@media screen and (min-width: 720px) {
+
+	nav ul {
+		display: flex;
+	}
+
+	nav .burger {
+		display: none;
+	}
+
+	.wrapper {
+		padding: 10vh 25vw 10vh 35vw;
+	}
+
+	.bookmark-box h1::before {
+		position: absolute;
+		left: 25vw;
+	}
+
+	#submitBookmark input {
+		width: 25vw;
+	}
+
+}
+
+nav {
+	font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	background-color: #009ACD;
+}
+
+nav ul li {
+	padding: 2vh 2.5vw;
+	transition: all 0.5s;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul li:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav .others {
+	flex: 2;
+}
+
+nav .spacer {
+	flex: 16;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+}
+
+nav a:hover {
+	text-decoration: none;
+	color: grey;
+}
+
+nav .burger {
+	justify-content: center;
+	align-items: center;
+	padding: 2vh 2.5vw;
+	background-color: #009ACD;
+	color: white;
+}
+
+header h1 {
+	color: #00B2EE;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-size: 11vh;
+	padding: 2vh 2vw;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.form {
+	text-align: center;
+}
+
+.form i {
+	cursor: pointer;
+	margin: 5vh;
+	color: #1E90FF;
+	font-size: 5vh;
+}
+
+#submitBookmark {
+	font-family: 'Playfair Display', serif;
+}
+
+#submitBookmark input {
+	border: 0px;
+	padding: 8px;
+	margin-bottom: 5vh;
+}
+
+.input-button {
+	color: white;
+	background-color: #1E90FF;
+}
+
+.form-display {
+	display: none;
+	transition: all 1s;
+}
+
+.bookmark-box {
+	margin: 5vh auto;
+	min-height: 4vh;
+	padding: 5vh 5vw;
+	border-radius: 8px;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+	border-left: 4px solid #00B2EE;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	transition: all 0.8s;
+}
+
+.bookmark-box:hover {
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.bookmark-box h1 {
+	font-weight: 100;
+}
+
+.bookmark-box h1::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	content: "\f02e";
+	color: #0099CC;
+	font-weight:900
+}
+
+.bookmark-box h4 {
+	font-weight: 200;
+}
+
+.bookmark-box p {
+	font-weight: 200;
+}
+
+.eye {
+	color: #0099CC;
+	position: relative;
+	left: 70%;
+	font-size: 2.8vh;
+}
+
+.trash {
+	color: red;
+	position: relative;
+	left: 74%;
+	font-size: 2.8vh;
+}
